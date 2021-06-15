@@ -1,28 +1,75 @@
 package com.dev.vo;
 
 public class ReservationVO {
-	private String IN_Y, IN_M, IN_D;
-	private String OUT_Y, OUT_M, OUT_D;
-	private String Tdate;
+	private String name;
+	private String id;
+	private String pwd;
+	private String birth;
+	private String startDate;
+	private String endDate;
+	private String in_Y, in_M, in_D;
+	private String oUT_Y, OUT_M, OUT_D;
 	private String Room;
-	private String name, Tel;
+	private String Tel;
 	private String Price;
 	
+	public ReservationVO() {}
+	public ReservationVO(String tName, String tId, String tPwd)
+	{
+		this.name = tName;	
+		this.id = tId;
+		this.pwd = tPwd;
+	}
+	public void setStartDate(String StartDate) {
+		this.startDate = StartDate;
+	}
+	public void setEndDate(String EndDate) {
+		this.endDate = EndDate;
+	}
+	public String getStartDate() {return this.startDate;}
+	public String getEndDate() {return this.endDate;}
+	
+	
+	
+	public String getId() 
+	{
+		return id;
+	}
+	public void setId(String tId) 
+	{
+		this.id = tId;
+	}
+	public String getPwd() 
+	{
+		return pwd;
+	}
+	public void setPwd(String tPwd) 
+	{
+		this.pwd = tPwd;
+	}
+	public String getBirth() 
+	{
+		return birth;
+	}
+	public void setBirth(String tBirth)
+	{
+		this.birth = birth;
+	}
 	public String getTel() 
 	{
 		return Tel;
 	}
-	public void setTel(String tel) 
+	public void setTel(String tTel) 
 	{
-		Tel = tel;
+		this.Tel = tTel;
 	}
 	public String getRoom() 
 	{
 		return Room;
 	}	
-	public void setRoom(String room) 
+	public void setRoom(String tRoom) 
 	{
-		Room = room;
+		Room = tRoom;
 	}
 		public String getPrice() 
 	{
@@ -42,33 +89,33 @@ public class ReservationVO {
 	}
 	public String getIN_Y() 
 	{
-		return IN_Y;
+		return in_Y;
 	}	
 	public void setIN_Y(String iN_Y) 
 	{
-		IN_Y = iN_Y;
+		in_Y = iN_Y;
 	}
 	public String getIN_M() 
 	{
-		return IN_M;
+		return in_M;
 	}
 	public void setIN_M(String iN_M) 
 	{
-		IN_M = iN_M;
+		in_M = iN_M;
 	}
 	public String getIN_D() 
 	{
-		return IN_D;
+		return in_D;
 	}
 	public void setIN_D(String iN_D) 
 	{
-		IN_D = iN_D;
+		in_D = iN_D;
 	}
 	public String getOUT_Y() 
 	{
-		return OUT_Y;
+		return oUT_Y;
 	}
-	public void setOUT_Y(String oUT_Y) 
+	public void setOUT_Y(String OUT_Y) 
 	{
 		OUT_Y = oUT_Y;
 	}

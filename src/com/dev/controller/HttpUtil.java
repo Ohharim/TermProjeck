@@ -5,12 +5,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HttpUtil {
-	private void forward(HttpServletRequest req, HttpServletResponse resp, String path) 
+	public static void forward(HttpServletRequest request, HttpServletResponse response, String path) 
 	{
 		try
 		{
-			RequestDispatcher rd = req.getRequestDispatcher(path);
-			rd.forward(req, resp);
+			RequestDispatcher rd = request.getRequestDispatcher(path);
+			rd.forward(request, response);
 		}catch(Exception e)
 		{
 			System.out.println("forward ¿À·ù: " + e);
