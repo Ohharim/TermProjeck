@@ -20,6 +20,10 @@ public class ReservationController implements Controller{
 		ReserVO.setRoom(Room);
 		ReserVO.setPrice(Price);
 		Service s = Service.getInstance();
-		s.reservation(Room, Price);
+		s.reservation1(Room, Price);
+		s.reservation2(Room, Price);
+		s.reservation3(Room, Price);
+
+	    HttpUtil.forward(request, response, "select.jsp");
 	}
 }
