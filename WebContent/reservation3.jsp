@@ -142,7 +142,7 @@ margin:auto;
 <br><br>
 <input type='checkbox' value='value' checked="checked" />동의합니다
 </p>
-<button onclick="buttonClick()"><h2><small><a href="index.jsp">예약 확정</a></small></h2></button>
+<button onclick="buttonClick()"><h2><small><a href="dropOutput">예약 확정</a></small></h2></button>
 
 	</div>
 	 
@@ -153,7 +153,7 @@ margin:auto;
 <script>
         function buttonClick() {
             alert('예약이 완료되었습니다.');
-            location.href("checkOutput.jsp");
+            location.href("dropOutput.jsp");
         }
     </script>
 </body>
