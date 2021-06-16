@@ -16,5 +16,30 @@ public class DropController implements Controller {
 		String endDate = request.getParameter("endDate");
 		String Room = request.getParameter("Room");
 		String price = request.getParameter("price");
+		
+		
+	      ReservationVO ReserVO = new ReservationVO();
+	      ReserVO.setStartDate(startDate);
+	      ReserVO.setEndDate(endDate);
+	      Service s = Service.getInstance();
+	      s.checkOutput(name, Tel, startDate, endDate, Room, Price);
+	      
+	      HttpSession session = request.getSession();
+	      session.setAttribute("name", name);
+	      session.setAttribute("Tel", Tel);
+	      session.setAttribute("startDate", startDate);
+	      session.setAttribute("endDate", endDate);
+	      session.setAttribute("Room", Room);
+	      session.setAttribute("Price", Price);
+	      
+	      session.setAttribute("name", name);
+	      session.setAttribute("Tel", Tel));
+	      session.setAttribute("startDate", startDate);
+	      session.setAttribute("endDate", endDate);
+	      session.setAttribute("Room", Room);
+	      session.setAttribute("Price", Price);
+	      
+	  	
+	      HttpUtil.forward(request, response, "dropOutput.jsp");
 	}
 }
